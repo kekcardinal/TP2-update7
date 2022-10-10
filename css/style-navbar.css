@@ -1,0 +1,92 @@
+/* background color de la barre de navigation */
+nav {
+    background-color: #f9f7f7;
+}
+
+/* Display flex pour le UL de la barre de navigation + enlever settings de la list (list-style:none)+padding*/
+.navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+/* Parametres des anchor tags dans la navbar */
+.navigation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #112D4E;
+    background-color: #f9f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    height: 50px;
+}
+
+/* Parametres des lists dans la navbar */
+.navigation li {
+    position: relative;
+    width: 100%;
+}
+
+/* Parametres du drop-down menu*/
+.navigation li:hover .deroulant>li {
+    display: block;
+}
+
+/* Parametres du active sur les anchor tags lorsque la page est active*/
+nav a.active {
+    background-color: #112D4E;
+    color: white;
+}
+
+/* Parametres du hover sur les anchor tags lorsque la souris est dessus*/
+nav a:hover:not(.active) {
+    background-color: #112D4E;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+/* Conteneur qui est en display flex flex-flow column pour afficher les differentes options*/
+.deroulant {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+/* Cache les options de la dropdown list lorsque le user ne se met pas en hover*/
+.deroulant li {
+    display: none;
+    position: relative;
+}
+
+/* Affiche les options de la dropdown list lorsque le user hover sur la liste*/
+.deroulant li:hover {
+    display: block;
+}
+
+/* Parametres des couleurs des options de la dropdown list*/
+.deroulant a {
+    background-color: #f9f7f7;
+    color: #112D4E;
+}
+
+/* Lorsque l ecran est de 720px le navbar se reduit et devient en flex-flow column*/
+
+@media screen and (max-width:720px) {
+    .navigation ul {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Enleve le padding lorsque le navbar est en 720 px*/
+    .navigation a {
+        padding: 0;
+    }
+}

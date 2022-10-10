@@ -1,0 +1,170 @@
+/* Import des pages CSS necessaires au projet*/
+
+@import "style-navbar.css";
+@import "style-images.css";
+@import "style-footer.css";
+@import "style-form.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+
+
+/*Parametres du html et du body pour le positionnement du footer*/
+
+html,
+body {
+    height: 100%;
+}
+
+/* Parametres de chacune des pages pour faire 100% de l'ecran*/
+#page {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Parametres du body, choix de la police et couleur du background de toutes les pages*/
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #dbe2ef;
+    /* Enleve l'espace entre le body et l'exterieur de la page */
+    margin: 0;
+    color: #112D4E;
+}
+
+/* Parametres du padding de la section image dans realisation.html*/
+.section_image>section {
+    padding: 50px;
+}
+
+/* Parametres des paragraphes dans la section image dans realisation.html*/
+.section_image>section p {
+    padding: 25px;
+}
+
+/* Bold pour les tableaux dans Education et Carriere */
+.table_section_bold {
+    font-weight: bold;
+    font-size: larger;
+    font-size: 15pt;
+}
+
+/* Italic pour les tableaux dans Education et Carriere */
+.table_section_italic {
+    font-style: italic;
+    font-size: 15pt;
+}
+
+/* Text-align center pour le header et les sections */
+section,
+header {
+    text-align: center;
+}
+
+/* Padding pour la section header*/
+header {
+    padding: 50px;
+}
+
+/* Parametres pour le texte d'introduction dans index.html */
+#texte_intro {
+    width: 50%;
+    margin: auto;
+    font-size: 15pt;
+    padding: 50px;
+}
+
+/* Parametres du texte dans le aside de la page carriere.html */
+.aside>p {
+    padding: 25px;
+}
+
+/* Parametres du conteneur de la page education.html*/
+.conteneur-education {
+    margin: 15px;
+}
+
+/* Rows du fichier education.html*/
+.ligne-education {
+    display: flex;
+    /* Row wrap (horizontal)*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Colonnes du fichier education.html*/
+.colonne-education {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Grid de la page carriere */
+.grid_carriere {
+    display: grid;
+    /* 3 colonnes */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 rows */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* Dimensions de chacune des sections de la page carriere.html : GRID ROW START, GRID COLUMN START, GRID ROW END , GRID COLONNE END*/
+.aside {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+/* Dimensions de chacune des sections de la page carriere.html : GRID ROW START, GRID COLUMN START, GRID ROW END , GRID COLONNE END*/
+.carriere-tableau-1 {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+/* Dimensions de chacune des sections de la page carriere.html : GRID ROW START, GRID COLUMN START, GRID ROW END , GRID COLONNE END*/
+.carriere-tableau-2 {
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+/* Dimensions de chacune des sections de la page carriere.html : GRID ROW START, GRID COLUMN START, GRID ROW END , GRID COLONNE END*/
+.carriere-tableau-3 {
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+/* Padding des tableaux dans carriere + aside  */
+.aside,
+.carriere-tableau-1,
+.carriere-tableau-2,
+.carriere-tableau-3,
+table {
+    padding: 50px;
+    border-spacing: 0;
+}
+
+/* Affichage d'un border lorsque l'ecran est plus gros que 720px */
+@media screen and (min-width:720px) {
+    .aside {
+        border-right: solid;
+        border-color: white;
+
+    }
+
+    /* Affichage des colonne-education de maniere a avoir 2 colonnes (flex : 1) lorsque l'ecran est plus gros que 720 px*/
+    .colonne-education {
+        flex: 1
+    }
+}
+
+/* Lorsque l'ecran est plus petit que 720 px, la grid dans carriere devient un flex column wrap et ligne education devient colonne wrap aussi */
+@media screen and (max-width: 720px) {
+    .grid_carriere {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .ligne-education {
+        flex-flow: column wrap;
+    }
+}

@@ -1,0 +1,20 @@
+/* .formulaire {
+    margin: 0 auto;
+} */
+
+.ligne_contact {
+    display: flex;
+    /* Row wrap (horizontal)*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.colonne_contact {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,94 @@
+/* Dimensions de mon image de profil dans la page index.html */
+
+.image_profil {
+    /* Settings d'image de profil*/
+    padding: 50px;
+    /*Dimensions des images*/
+    height: 600px;
+    width: 600px;
+    /*Met un cercle autour des images*/
+    border-radius: 50%;
+    /*Permet de crop les images aux dimensions*/
+    object-fit: cover;
+    border: solid;
+    color: #f9f7f7;
+}
+
+/* Dimensions de mes images dans la page education.html */
+
+.image_education {
+    /* Settings d'image de profil*/
+    padding: 50px;
+    /*Met un cercle autour des images*/
+    border-radius: 50%;
+    /*Dimensions des images*/
+    height: 400px;
+    width: 400px;
+    /*Permet de crop les images aux dimensions*/
+    object-fit: fill;
+    border: solid;
+    color: #f9f7f7;
+}
+
+/* Met la section_image dans realisation.html en display flex pour ma gallery d'image*/
+
+.section_image {
+    display: flex;
+    /* Met en row wrap le flex donc les images s'alignent de maniere horizontale*/
+    flex-flow: row wrap;
+    /* Met un gap entre chacune des images (apres le padding) */
+    gap: 5px;
+    justify-content: center;
+}
+
+/* Chaque zone d'image prend 300px du flexbox row wrap*/
+
+.image_realisation {
+    flex: 300px;
+}
+
+/* Dimensions de chaque image dans la gallery d'image realisation.html*/
+
+.image_realisation img {
+    /*Dimensions des images*/
+    height: 300px;
+    width: 300px;
+    /*Met un cercle autour des images avec le padding*/
+    border-radius: 50%;
+    padding: 50px;
+    /*Permet de crop les images aux dimensions*/
+    object-fit: cover;
+    border-style: solid;
+    border-color: #f9f7f7;
+}
+
+/* Lorsque l ecran est de 720px les images se reduise pour permettre de les afficher a l'ecran*/
+
+@media screen and (max-width: 720px) {
+
+    .image_profil {
+        /* Settings d'image de profil*/
+        /*Dimensions des images*/
+        height: 250px;
+        width: 250px;
+    }
+
+    /* Changement de la gallery d'image de flex-row a flex-column pour que les images se stack verticalement*/
+    .image_realisation {
+        flex-direction: column;
+    }
+
+    .image_realisation img {
+        /* Settings d'image de profil*/
+        /*Dimensions des images*/
+        height: 250px;
+        width: 250px;
+    }
+
+    .image_education {
+        /* Settings d'image de profil*/
+        /*Dimensions des images*/
+        height: 250px;
+        width: 250px;
+    }
+}

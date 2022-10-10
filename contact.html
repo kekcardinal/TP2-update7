@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadonnees du site, link vers le css, description, auteur -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travaux pratique 2">
+    <meta name="author" content="Felix Boutin-Cousineau">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Accueil</title>
+</head>
+
+<body>
+    <!-- Conteneur de la page (pour mettre 100% de la page) -->
+    <div id="page">
+        <!-- Navigation du site -->
+        <nav class="navigation">
+            <ul role="menu">
+                <li role="menuitem" aria-haspopup="false"><a href="index.html">Introduction</a></li>
+                <li role="menuitem" aria-haspopup="false"><a href="education.html">Éducation</a></li>
+                <li role="menuitem" aria-haspopup="false"><a href="carriere.html">Carrière</a>
+                </li>
+                <li role="menuitem" aria-haspopup="true"><a href="#">Réalisation +</a>
+                    <!-- Dropdown menu pour la section realisation -->
+                    <ul role="menu" class="deroulant">
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_1">Photo 1</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_2">Photo 2</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_3">Photo 3</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_4">Photo 4</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_5">Photo 5</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_6">Photo 6</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_7">Photo 7</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_8">Photo 8</a></li>
+                        <li role="menuitem" aria-haspopup="false"><a href="realisations.html#photo_9">Photo 9</a></li>
+                    </ul>
+                </li>
+                <li role="menuitem" aria-haspopup="false"><a href="contact.html" class="active">Contact</a></li>
+                <li role="menuitem" aria-haspopup="false"><a href="validation.html">Validation</a></li>
+            </ul>
+        </nav>
+        <!-- En-tete de la page -->
+        <header>
+            <h1>Contactez-moi</h1>
+        </header>
+        <main>
+            <section class="formulaire">
+                <form action="envoyer.html" method="get">
+
+
+                    <div class="ligne_contact">
+                        <div class="colonne_contact">
+                            <label for="prenom">*Prénom</label>
+                            <input type="text" id="prenom" name="prenon">
+                        </div>
+                        <div class="colonne_contact">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" id="adresse" name="adresse">
+                        </div>
+                    </div>
+                    <div class="ligne_contact">
+                        <div class="colonne_contact">
+                            <label for="courriel">Courriel</label>
+                            <input type="email" id="courriel" name="courriel">
+                        </div>
+                        <div class="colonne_contact">
+                            <label for="dob">Date de naissance</label>
+                            <input type="date" id="dob" name="naissance">
+                        </div>
+                    </div>
+                    <div class="ligne_contact">
+                        <div class="colonne_contact">
+                            <label for="Satisfaction">Etes-vous satisfait de votre navigation sur le site
+                                web:</label>
+
+                            <select name="selection" id="selection">
+                                <option value="oui">Oui</option>
+                                <option value="non">Non</option>
+                                <option value="aucun">Aucune de ces reponses</option>
+                            </select>
+
+                            <input type="submit" value="Saisir">
+                        </div>
+                    </div>
+
+                    <!-- Envoyer -->
+
+                    <!--<button>Saisir 2</button>-->
+                </form>
+            </section>
+        </main>
+
+
+    </div>
+    <!-- Footer de mes pages html-->
+    <footer>
+        <div class="conteneur-footer">
+            <div class="section-nom">
+                <h1>Félix Boutin-Cousineau</h1>
+            </div>
+            <div class="section-social">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/felix.cousineau" target="_blank">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ffelix-boutin-3317a0137%3Ffbclid%3DIwAR3sNv3O0SuBhjASDBKBsaZmmvaJ235bY2H1iT41OGkLdKH1-DRdm1Y-QuM&h=AT07vODF49xS3wylnVWN8DboDHgrlhdu8t-3xo3W0Ykwk-Qza8rLuFgcLFyOd5Z05CnsOHjrDhijA9h3GSuoye9Y6F0zzD1CHO77SSWRN-Bs-XZ5tEqYrIU50EBHhex5aQE"
+                            target="_blank">Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/felixcousineau/" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-contact">
+                <ul>
+                    <li>boutinfelix@gmail.com</li>
+                    <li>111-111-1111</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
